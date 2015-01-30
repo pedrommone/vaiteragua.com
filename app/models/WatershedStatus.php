@@ -1,6 +1,6 @@
 <?php
 
-class WatershedStatus extends Model {
+class WatershedStatus extends Eloquent {
 	
 	public $table = 'watershed_statuses';
 }

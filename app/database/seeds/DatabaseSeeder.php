@@ -9,9 +9,16 @@ class DatabaseSeeder extends Seeder {
 	 */
 	public function run()
 	{
+
 		Eloquent::unguard();
 
-		// $this->call('UserTableSeeder');
+		HydrographicVessel::insert([
+			['description' => 'Rio Manso'],
+			['description' => 'Serra Azul'],
+			['description' => 'Vargem das Flores']
+		]);
+
+		$this->command->info('Added initial vessels.');
 	}
 
 }

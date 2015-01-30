@@ -1,6 +1,6 @@
 <?php
 
-class HydrographicVessel extends Model {
+class HydrographicVessel extends Eloquent {
 	
 	public $table = 'hydrographic_reservoirs';
 
