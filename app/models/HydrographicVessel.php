@@ -4,6 +4,8 @@ class HydrographicVessel extends Eloquent {
 	
 	public $table = 'hydrographic_reservoirs';
 
+	protected $fillable = ['description'];
+
 	public function status()
 	{
 
