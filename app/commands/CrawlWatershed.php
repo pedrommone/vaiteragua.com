@@ -1,6 +1,8 @@
 <?php
 
+use Goutte\Client;
 use Illuminate\Console\Command;
+use Symfony\Component\DomCrawler\Crawler;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
@@ -18,10 +20,33 @@ class CrawlWatershed extends Command {
 	public function fire()
 	{
 
-		$this->info('aaaa');
-	
-		$client = new \GuzzleHttp\Client();
-		$response = $client->get('http://www.copasatransparente.com.br/index.php/nivel-dos-reservatorios/');
-		echo ($response->getBody());
+		try
+		{
+
+			// Make request agains Copasa
+			$client = new Client();
+			$crawler = $client->request('GET', 'http://www.copasatransparente.com.br/index.php/nivel-dos-reservatorios/');
+			
+			// Filter and get our information
+			$crawln = $crawler->filterXPath('//*[@id="post-24"]/div/div[2]/p[1]/strong')->text();
+
+			// Make use of regex!
+			preg_match_all("/\(atualizado em (.*)\/(.*)\/(.*)\): (.*)%/", $crawln, $parse_crawln);
+
+			// Format it to US standard
+			$parse_crawln = (double) str_replace(',', '.', $parse_crawln[4])[0];
+
+			// Now, lets store it into our database.
+			$watershed_status = new WatershedStatus;
+			$watershed_status->percentage = $parse_crawln;
+			$watershed_status->save();
+
+			$this->info('Watershed status updated, now is ' . $parse_crawln . '%.');
+		}
+		catch (Exception $e)
+		{
+
+			$this->error('Error on watershed clawln procedure: ' . $e->getMessage());
+		}
 	}
 }
