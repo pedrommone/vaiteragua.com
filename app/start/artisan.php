@@ -12,3 +12,4 @@
 */
 
 Artisan::add(new CrawlWatershed);
+Artisan::add(new ReservoirsWatershed);

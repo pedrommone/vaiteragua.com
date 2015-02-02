@@ -33,9 +33,6 @@ class CrawlWatershed extends Command {
 			// Make use of regex!
 			preg_match_all("/\(atualizado em (.*)\/(.*)\/(.*)\): (.*)%/", $crawln, $parse_crawln);
 
-			// Format it to US standard
-			$parse_crawln = (double) str_replace(',', '.', $parse_crawln[4])[0];
-
 			// Now, lets store it into our database.
 			$watershed_status = new WatershedStatus;
 			$watershed_status->percentage = $parse_crawln;
