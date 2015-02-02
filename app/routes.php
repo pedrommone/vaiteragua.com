@@ -13,5 +13,25 @@
 
 Route::get('/', function()
 {
+
 	return View::make('hello');
+});
+
+Route::api('v1', function()
+{
+
+	Route::group(['prefix' => 'watershed'], function()
+	{
+
+		Route::get('/', 'WatershedController@getIndex');		
+		Route::get('current', 'WatershedController@getCurrent');
+	});
+
+	Route::group(['prefix' => 'reservoirs'], function()
+	{
+
+		Route::get('/', 'ReservoirsController@getIndex');		
+		Route::get('{id}', 'ReservoirsController@getId')
+			->where(['id' => '[0-9]+']);
+	});
 });
