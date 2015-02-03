@@ -17,21 +17,25 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::api('v1', function()
+Route::group(['prefix' => 'api'], function()
 {
 
-	Route::group(['prefix' => 'watershed'], function()
+	Route::api('v1', function()
 	{
 
-		Route::get('/', 'WatershedController@getIndex');		
-		Route::get('current', 'WatershedController@getCurrent');
-	});
+		Route::group(['prefix' => 'watershed'], function()
+		{
 
-	Route::group(['prefix' => 'reservoirs'], function()
-	{
+			Route::get('/', 'Api\WatershedController@getIndex');
+			Route::get('current', 'Api\WatershedController@getCurrent');
+		});
 
-		Route::get('/', 'ReservoirsController@getIndex');		
-		Route::get('{id}', 'ReservoirsController@getId')
-			->where(['id' => '[0-9]+']);
+		Route::group(['prefix' => 'reservoirs'], function()
+		{
+
+			Route::get('/', 'Api\ReservoirsController@getIndex');
+			Route::get('{id}', 'Api\ReservoirsController@getId')
+				->where(['id' => '[0-9]+']);
+		});
 	});
 });

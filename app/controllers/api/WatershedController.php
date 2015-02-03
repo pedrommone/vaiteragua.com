@@ -1,6 +1,8 @@
 <?php
 
-class WatershedController extends BaseController {
+namespace Api;
+
+class WatershedController extends \Controller {
 
 	public function getIndex() {}
 	public function getCurrent() {}
