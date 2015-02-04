@@ -1,0 +1,75 @@
+* { margin:0; padding: 0; }
+
+body {
+	width: 100%;
+	min-width: 960px;
+	height: 100%;
+	overflow: hidden;
+	background-color: rgb(67, 152, 205);
+	text-align: center;
+	font-family: play; }
+
+
+.brand {
+	width: 289px;
+	margin-top: 20px;
+	opacity: 0.8; }
+
+.brand:hover { opacity: 1; cursor: pointer; }
+
+
+p {
+	font-size: 2em;
+	color: #fff; }
+
+.water {
+	background-color: rgb(23, 92, 160);
+	height: 400px;
+	width: 100%;
+	display: block;
+	position: absolute;
+	bottom: 0;	}
+
+.ruler { 
+	width: 40px;
+	height: 400px;
+	background-color: #fff;
+	border-radius: 2px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 9999; }
+
+.btn {
+	height: 45px;
+	width: 198px;
+	background-color: rgb(218, 95, 31);
+	color: #fff;
+	line-height: 45px;
+	border-radius: 2px;
+	position: absolute;
+	bottom: 20px;
+	left: 43.5%;
+	z-index: 1;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.298039) 2px 2px 3px 0px;
+	box-shadow: rgba(0, 0, 0, 0.298039) 2px 2px 3px 0px;
+	text-decoration: none; }
+
+.drop {
+	width: 86px;
+	height: 100px;
+	background: url('../img/pingo.png') no-repeat;
+	display: inline-block;
+	top: -77px;
+	position: relative;
+	z-index: -1;
+	font-size: 2em;
+	text-align: center;
+	font-weight: normal;
+	line-height: 1em;
+	color: rgb(85, 85, 85);
+	letter-spacing: -2px;
+	font-family: Play;
+	padding-top: 25px;	}
+
+
