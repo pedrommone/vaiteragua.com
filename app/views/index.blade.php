@@ -12,9 +12,8 @@
 
 		<section class="water">
 			<div class="drop">100%</div>
+			<a href="#" class="btn">Ver por reservatórios</a>
 		</section>
-
-		<a href="#" class="btn">Ver por reservatórios</a>
 		<div class="ruler"></div>
 </body>
 </html>
