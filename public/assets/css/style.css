@@ -57,13 +57,19 @@ p {
 	text-decoration: none; 
 	margin-left: -144px;	}
 
+.mousedrop {
+	width: 100%;
+	height: 86px;
+	top: -77px;
+	position: relative;
+	text-align: center;	}
+
 .drop {
 	width: 86px;
 	height: 100px;
 	background: url('../img/pingo.png') no-repeat;
 	display: inline-block;
-	top: -77px;
-	position: relative;
+	position: absolute;
 	z-index: -1;
 	font-size: 2em;
 	text-align: center;
