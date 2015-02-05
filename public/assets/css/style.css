@@ -22,7 +22,8 @@ p {
 	font-size: 2em;
 	color: #fff; }
 
-water {
+.water {
+	background-color: rgb(23, 92, 160);
 	height: 400px;
 	width: 100%;
 	min-width: 960px;
@@ -79,6 +80,4 @@ water {
 	font-family: Play;
 	padding-top: 25px;	}
 
-/*
- * Water effect
- */
+
