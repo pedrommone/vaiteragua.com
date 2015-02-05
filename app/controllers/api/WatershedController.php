@@ -12,9 +12,22 @@ class WatershedController extends \Controller {
 	use ControllerTrait;
 
 	/*
-	 * List status from past 30 days
+	 * List current status
 	 */
 	public function getIndex()
+	{
+
+		$watershed_status = WatershedStatus::
+			  orderBy('created_at', 'desc')
+			->first();
+
+		return $this->response->item($watershed_status, new CurrentWatershedTransformer);
+	}
+
+	/*
+	 * List status from past 30 days
+	 */
+	public function getHistory()
 	{
 
 		$watershed_status = WatershedStatus::
@@ -23,18 +36,5 @@ class WatershedController extends \Controller {
 			->get();
 
 		return $this->response->collection($watershed_status, new WatershedTransformer);
-	}
-
-	/*
-	 * List current status
-	 */
-	public function getCurrent()
-	{
-
-		$watershed_status = WatershedStatus::
-			  orderBy('created_at', 'desc')
-			->first();
-
-		return $this->response->item($watershed_status, new CurrentWatershedTransformer);
 	}
 }

@@ -27,7 +27,7 @@ Route::group(['prefix' => 'api'], function()
 		{
 
 			Route::get('/', 'Api\WatershedController@getIndex');
-			Route::get('current', 'Api\WatershedController@getCurrent');
+			Route::get('history', 'Api\WatershedController@getHistory');
 		});
 
 		Route::group(['prefix' => 'reservoirs'], function()
