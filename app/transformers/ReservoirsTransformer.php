@@ -2,20 +2,15 @@
 
 class ReservoirsTransformer {
 
-	public function transform($reservoirs)
+	public function transform($vessel)
 	{
 
-		$reser = [];
-
-		die( var_dump($reservoirs) );
-
-		foreach ($reservoirs as $aux)
-			$reser[] = [
-				'description' 	=> $aux->description,
-				'last_updated' => $aux->last_updated,
-			];
-
-
-		return var_dump($reser);
+		return [
+			'description' 		=> $vessel->description,
+			'latest_status' 	=> [
+				'percentage' => $vessel->latest_status->percentage,
+				'created_at' => $vessel->latest_status->created_at->format('m/d/Y h:i:s')
+			]
+		];
 	}
 }
