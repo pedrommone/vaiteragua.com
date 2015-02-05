@@ -6,6 +6,9 @@
 
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Play" type="text/css">
 		<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
 	</head>
 
 	<body>
