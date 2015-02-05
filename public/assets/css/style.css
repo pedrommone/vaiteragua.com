@@ -49,11 +49,10 @@ p {
 	color: #fff;
 	line-height: 45px;
 	border-radius: 4px;
-	bottom: 30px;
-	z-index: 1;
 	display: inline-block;
-	-webkit-box-shadow: rgba(0, 0, 0, 0.298039) 2px 2px 3px 0px;
-	box-shadow: rgba(0, 0, 0, 0.298039) 2px 2px 3px 0px;
+	margin-top: 25px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.29) 2px 2px 3px 0px;
+	box-shadow: rgba(0, 0, 0, 0.29) 2px 2px 3px 0px;
 	text-decoration: none; }
 
 .btn:hover { background-color: rgb(240, 128, 70); }
