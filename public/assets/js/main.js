@@ -25,7 +25,7 @@ var update_current_status = function() {
 
 		var data = JSON.parse(xhr.responseText).data;
 
-		drop.innerHTML = data.percentage + "%";
+		drop.innerHTML = data.percentage.toFixed(1) + "%";
 		water.style.height = (max_water * data.percentage) / 100 + "px";
 	};
 
