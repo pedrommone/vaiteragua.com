@@ -4,7 +4,6 @@ body {
 	width: 100%;
 	min-width: 960px;
 	height: 100%;
-	overflow: hidden;
 	background-color: rgb(67, 152, 205);
 	text-align: center;
 	font-family: 'Play', sans-serif; }
@@ -48,14 +47,15 @@ p {
 	background-color: rgb(218, 95, 31);
 	color: #fff;
 	line-height: 45px;
-	border-radius: 2px;
-	position: absolute;
-	bottom: 20px;
+	border-radius: 4px;
+	bottom: 30px;
 	z-index: 1;
+	display: inline-block;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.298039) 2px 2px 3px 0px;
 	box-shadow: rgba(0, 0, 0, 0.298039) 2px 2px 3px 0px;
-	text-decoration: none; 
-	margin-left: -144px;	}
+	text-decoration: none; }
+
+.btn:hover { background-color: rgb(240, 128, 70); }
 
 .mouse-drop {
 	width: 100%;

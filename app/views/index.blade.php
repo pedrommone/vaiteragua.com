@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Vai ter água</title>
 
-		<link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Play" type="text/css">
 		<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 	</head>
 
@@ -26,6 +26,8 @@
 		</section>
 
 		<div class="ruler"></div>
+
+		<script> var base_url = "{{ url('/') }}"; </script>
 		<script src="{{ asset('assets/js/main.js') }}"></script>
 	</body>
 </html>
