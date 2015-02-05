@@ -6,6 +6,7 @@ class ReservoirsTransformer {
 	{
 
 		return [
+			'id'					=> $vessel->id,
 			'description' 		=> $vessel->description,
 			'latest_status' 	=> [
 				'percentage' => $vessel->latest_status->percentage,
