@@ -17,7 +17,7 @@
 			suave, sophisticated British agent, James Bond." />
 		<meta property="og:locale" content="pt_br" />
 		<meta property="og:site_name" content="Vai ter água" />
-		<meta property="og:image" content="{{ asset('assets/img/og.png') }" />
+		<meta property="og:image" content="{{ asset('assets/img/og.png') }}" />
 	</head>
 
 	<body>
