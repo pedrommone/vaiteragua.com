@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Vai ter água</title>
 
+		<link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 	</head>
 
@@ -12,14 +13,19 @@
 		<p>Se todo mundo colaborar não vai faltar pra ninguém</p>
 
 		<section class="water">
-			<div class="mousedrop">
+			<div class="mouse-drop">
 				<div class="drop">100%</div>
+			</div>
+
+			<div class="waves">
+				<div class="wave-1"></div>
+				<div class="wave-2"></div>
 			</div>
 
 			<a href="#" class="btn">Ver por reservatórios</a>
 		</section>
 
 		<div class="ruler"></div>
-		<script src="{{ asset('assets/ja/main.js') }}"></script>
+		<script src="{{ asset('assets/js/main.js') }}"></script>
 	</body>
 </html>
