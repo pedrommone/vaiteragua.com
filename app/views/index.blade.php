@@ -9,6 +9,15 @@
 
 		<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 		<link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="{{ url('/') }}" />
+		<meta property="og:description" 
+			content="Sean Connery found fame and fortune as the
+			suave, sophisticated British agent, James Bond." />
+		<meta property="og:locale" content="pt_br" />
+		<meta property="og:site_name" content="Vai ter água" />
+		<meta property="og:image" content="{{ asset('assets/img/og.png') }" />
 	</head>
 
 	<body>
@@ -26,7 +35,7 @@
 			</div>
 		</section>
 
-		<a href="#" class="btn">Ver por reservatórios</a>
+		<a href="#" class="btn">Ver histórico</a>
 		<div class="ruler"></div>
 
 		<script> var base_url = "{{ url('/') }}"; </script>
