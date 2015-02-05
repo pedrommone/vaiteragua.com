@@ -21,10 +21,9 @@
 				<div class="wave-1"></div>
 				<div class="wave-2"></div>
 			</div>
-
-			<a href="#" class="btn">Ver por reservatórios</a>
 		</section>
 
+		<a href="#" class="btn">Ver por reservatórios</a>
 		<div class="ruler"></div>
 
 		<script> var base_url = "{{ url('/') }}"; </script>

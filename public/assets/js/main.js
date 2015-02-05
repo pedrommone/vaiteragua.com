@@ -6,8 +6,10 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-59389995-1', 'auto');
 ga('send', 'pageview');
 
-var body = document.querySelector('body')
-  , drop = document.querySelector('.drop');
+var body 		= document.querySelector('body')
+  , drop 		= document.querySelector('.drop')
+  , water 		= document.querySelector('.water')
+  , max_water	= 260;
 
 body.onmousemove = function() {
 
@@ -21,7 +23,10 @@ var update_current_status = function() {
 
 	xhr.onload = function(e) {
 
-		drop.innerHTML = JSON.parse(xhr.responseText).data.percentage + "%";
+		var data = JSON.parse(xhr.responseText).data;
+
+		drop.innerHTML = data.percentage + "%";
+		water.style.height = (max_water * data.percentage) / 100 + "px";
 	};
 
 	xhr.send();
