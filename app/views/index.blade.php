@@ -13,10 +13,10 @@
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="{{ url('/') }}" />
 		<meta property="og:description" 
-			content="Sean Connery found fame and fortune as the
-			suave, sophisticated British agent, James Bond." />
+			content="Veja o volume de água dos reservatórios da Região Metropolitana e faça sua parte para dizermos juntos que vai ter água." />
 		<meta property="og:locale" content="pt_br" />
 		<meta property="og:site_name" content="Vai ter água" />
+		<meta property="og:title" content="Vai ter água" />
 		<meta property="og:image" content="{{ asset('assets/img/og.png') }}" />
 	</head>
 
@@ -35,8 +35,28 @@
 			</div>
 		</section>
 
-		<a href="#" class="btn">Ver histórico</a>
+		<a href="#history" class="btn">Ver histórico</a>
 		<div class="ruler"></div>
+
+		<!-- Modal -->
+		<div class="modal" id="history" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-header">
+					<h2>Histórico dos reservatórios e geral</h2>
+					<a href="#close" class="btn-close" aria-hidden="true">×</a>
+				</div>
+
+				<div class="modal-body">
+					<h3>Bácia 1</h3>
+					Gráfico
+				</div>
+
+				<div class="modal-footer">
+					<a href="#close" class="btn btn-fechar">Fechar</a>
+				</div>
+			</div>
+		</div>
+		<!-- /Modal -->
 
 		<script> var base_url = "{{ url('/') }}"; </script>
 		<script src="{{ asset('assets/js/main.js') }}"></script>
