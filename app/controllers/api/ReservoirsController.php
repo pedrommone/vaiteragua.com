@@ -7,6 +7,7 @@ use \VesselHistoryTransformer;
 use \GoogleChartTransformer;
 use \ReservoirsTransformer;
 use \HydrographicVessel;
+use \Carbon\Carbon;
 
 class ReservoirsController extends \Controller {
 
@@ -63,25 +64,34 @@ class ReservoirsController extends \Controller {
 
 		// Index dates
 		foreach ($status as $row)
+
 			$data['columns'][] = $row->description;
+
+		// Prefill with past dates
+		foreach (range(29, 0) as $num)
+		{
+
+			$aux_index = Carbon::now()
+				->subDays($num)
+				->format('d/m/y');
+
+			$data[$aux_index][0] = $aux_index;
+
+			foreach ($status as $row)
+
+				$data[$aux_index][] = null;
+		}
 
 		// Populate data
 		foreach ($status as $row)
 		{
 
+			$aux_colun = array_search($row->description, $data['columns']);
+
 			foreach ($row->status as $point)
 			{
 
-			
 				$aux_index = $point->created_at->format('d/m/y');
-				$aux_colun = array_search($row->description, $data['columns']);
-
-				if ( ! isset($data[$aux_index][0]) )
-				{
-
-					$data[$aux_index][0] = $point->created_at->format('d/m/y');
-				}
-
 				$data[$aux_index][$aux_colun] = (double) $point->percentage;
 			}
 		}

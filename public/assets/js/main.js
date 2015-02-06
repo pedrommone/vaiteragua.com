@@ -35,8 +35,10 @@ var update_current_status = function() {
 function drawChart() {
 
 	var options = {
-		curveType: 'function',
-		legend: { position: 'bottom' }
+		  curveType: 'function'
+		, legend: { position: 'bottom' }
+		, pointSize: 5
+		, vAxis: { minValue: 0, maxValue: 100 } 
 	};
 
 	var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
@@ -49,7 +51,6 @@ function drawChart() {
 		var data = JSON.parse(xhr.responseText);
 
 		chart.draw(google.visualization.arrayToDataTable(data), options);
-		//chart.draw(new google.visualization.DataTable(xhr.responseText), options);
 	};
 
 	xhr.send();
