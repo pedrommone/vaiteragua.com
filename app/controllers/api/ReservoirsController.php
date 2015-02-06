@@ -31,7 +31,7 @@ class ReservoirsController extends \Controller {
 
 		$history = HydrographicVessel::with(['status' => function($query) {
 
-			$query->orderBy('created_at', 'desc')
+			$query->orderBy('created_at', 'asc')
 				->take(30);
 		}])
 			->findOrFail($id)
@@ -48,7 +48,7 @@ class ReservoirsController extends \Controller {
 
 		$status = HydrographicVessel::with(['status' => function($query) {
 
-			$query->orderBy('created_at', 'desc')
+			$query->orderBy('created_at', 'asc')
 				->take(30);
 		}])
 			->get();
