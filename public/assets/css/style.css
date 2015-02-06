@@ -241,8 +241,6 @@ p {
 }
 
 .copyright a {
-	text-decoration: none;
+	text-decoration: underline;
 	color: #fff;
 }
-
-.copyright a:hover { text-decoration: underline; }
