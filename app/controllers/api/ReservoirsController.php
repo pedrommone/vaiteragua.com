@@ -7,6 +7,7 @@ use \VesselHistoryTransformer;
 use \GoogleChartTransformer;
 use \ReservoirsTransformer;
 use \HydrographicVessel;
+use WatershedStatus;
 use \Carbon\Carbon;
 
 class ReservoirsController extends \Controller {
@@ -59,8 +60,13 @@ class ReservoirsController extends \Controller {
 		// return $this->response->item(['t'], new GoogleChartTransformer);
 		
 		$data = [
-			'columns' => ['Data']
+			'columns' => ['Data', 'Geral']
 		];
+
+		$geral = WatershedStatus::
+			    orderBy('created_at', 'asc')
+			->take(30)
+			->get();
 
 		// Index dates
 		foreach ($status as $row)
@@ -77,10 +83,15 @@ class ReservoirsController extends \Controller {
 
 			$data[$aux_index][0] = $aux_index;
 
-			foreach ($status as $row)
+			foreach (range(0, count($status)) as $aux)
 
 				$data[$aux_index][] = null;
 		}
+
+		// Get general data
+		foreach ($geral as $row)
+			
+			$data[$row->created_at->format('d/m/y')][1]  = (double) $row->percentage;
 
 		// Populate data
 		foreach ($status as $row)
