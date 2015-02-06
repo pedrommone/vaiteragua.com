@@ -230,3 +230,19 @@ p {
 	text-align: center;
 	margin-right: -10px;
 }
+
+.copyright {
+	font-size: 1em;
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+	width: 100%;
+	margin-top: 0;
+}
+
+.copyright a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.copyright a:hover { text-decoration: underline; }
