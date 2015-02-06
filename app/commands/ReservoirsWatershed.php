@@ -36,10 +36,13 @@ class ReservoirsWatershed extends Command {
 
 				// Make a regex and get usable data.
 				preg_match_all("/(.*): (.*)%/", $node->text(), $parse_crawln);
-				
+
+				// Format it to US standard
+				$percentage = (double) str_replace(',', '.', $parse_crawln[2])[0];
+
 				$crawln_vessels[] = [
 					'description' => $parse_crawln[1][0],
-					'percentage' => $parse_crawln[2][0]
+					'percentage' => $percentage
 				];
 			});
 
