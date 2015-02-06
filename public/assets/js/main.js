@@ -32,4 +32,28 @@ var update_current_status = function() {
 	xhr.send();
 };
 
+function drawChart() {
+
+	var options = {
+		curveType: 'function',
+		legend: { position: 'bottom' }
+	};
+
+	var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+	var xhr = new XMLHttpRequest();
+
+	xhr.open("GET", base_url + '/api/reservoirs/google-chart');
+
+	xhr.onload = function(e) {
+
+		var data = JSON.parse(xhr.responseText);
+
+		chart.draw(google.visualization.arrayToDataTable(data), options);
+		//chart.draw(new google.visualization.DataTable(xhr.responseText), options);
+	};
+
+	xhr.send();
+}
+
 update_current_status();
+google.setOnLoadCallback(drawChart);

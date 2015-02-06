@@ -184,12 +184,12 @@ p {
 	background: #fefefe;
 	border: #333333 solid 1px;
 	border-radius: 5px;
-	margin-left: -300px;
+	margin-left: -350px;
 	position: fixed;
 	left: 50%;
 	top: -100%;
 	z-index: 11;
-	width: 600px;
+	width: 700px;
 	-webkit-transform: translate(0, -500%);
 	-ms-transform: translate(0, -500%);
 	transform: translate(0, -500%);

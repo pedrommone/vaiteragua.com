@@ -36,6 +36,8 @@ Route::group(['prefix' => 'api'], function()
 			Route::get('/', 'Api\ReservoirsController@getIndex');
 			Route::get('{id}', 'Api\ReservoirsController@getId')
 				->where(['id' => '[0-9]+']);
+
+			Route::get('google-chart', 'Api\ReservoirsController@getGoogleChart');
 		});
 	});
 });

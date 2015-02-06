@@ -42,13 +42,12 @@
 		<div class="modal" id="history" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-header">
-					<h2>Histórico dos reservatórios e geral</h2>
+					<h2>Reservatórios nos últimos 30 dias</h2>
 					<a href="#close" class="btn-close" aria-hidden="true">×</a>
 				</div>
 
 				<div class="modal-body">
-					<h3>Bácia 1</h3>
-					Gráfico
+					<div id="curve_chart"></div>
 				</div>
 
 				<div class="modal-footer">
@@ -59,6 +58,7 @@
 		<!-- /Modal -->
 
 		<script> var base_url = "{{ url('/') }}"; </script>
+		<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart']}]}"></script>
 		<script src="{{ asset('assets/js/main.js') }}"></script>
 	</body>
 </html>
