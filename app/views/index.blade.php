@@ -21,23 +21,6 @@
 	</head>
 
 	<body>
-		<img src="{{ asset('assets/img/vaiteragua.png') }}" class="brand" alt="">
-		<p>Se todo mundo colaborar não vai faltar pra ninguém</p>
-
-		<section class="water">
-			<div class="mouse-drop">
-				<div class="drop">100%</div>
-			</div>
-
-			<div class="waves">
-				<div class="wave-1"></div>
-				<div class="wave-2"></div>
-			</div>
-		</section>
-
-		<a href="#history" class="btn">Ver histórico</a>
-		<div class="ruler"></div>
-
 		<!-- Modal -->
 		<div class="modal" id="history" aria-hidden="true">
 			<div class="modal-dialog">
@@ -56,6 +39,24 @@
 			</div>
 		</div>
 		<!-- /Modal -->
+		
+		<img src="{{ asset('assets/img/vaiteragua.png') }}" class="brand" alt="">
+		<p>Se todo mundo colaborar não vai faltar pra ninguém</p>
+
+		<section class="water">
+			<div class="mouse-drop">
+				<div class="drop">100%</div>
+			</div>
+
+			<div class="waves">
+				<div class="wave-1"></div>
+				<div class="wave-2"></div>
+			</div>
+		</section>
+
+		<a href="#history" class="btn">Ver histórico</a>
+		<div class="ruler"></div>
+
 
 		<script> var base_url = "{{ url('/') }}"; </script>
 		<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart']}]}"></script>
