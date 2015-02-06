@@ -244,3 +244,5 @@ p {
 	text-decoration: underline;
 	color: #fff;
 }
+
+#curve_chart { width: 100%; }

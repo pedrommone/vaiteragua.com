@@ -35,10 +35,18 @@ var update_current_status = function() {
 function drawChart() {
 
 	var options = {
-		  curveType: 'function'
+		  hartArea: { left: 0, top: 0, width: "100%", height: "100%" }
+		, curveType: 'function'
 		, legend: { position: 'bottom' }
 		, pointSize: 5
-		, vAxis: { minValue: 0, maxValue: 100 } 
+		, vAxis: {
+			  minValue: 0
+			, maxValue: 100
+		}
+		, hAxis: {
+			  format: "d/m"
+			, showTextEvery: 4
+		}
 	};
 
 	var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
