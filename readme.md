@@ -10,8 +10,7 @@ Its an open source project, our goal is create a hotsite that we can show with s
 
 * [Laravel] - Backend e crawler
 
-Licença
-----
+### Licença
 
 MIT
 
