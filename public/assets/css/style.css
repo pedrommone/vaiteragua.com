@@ -25,7 +25,6 @@ p {
 	background-color: rgb(23, 92, 160);
 	height: 260px;
 	width: 100%;
-	min-width: 960px;
 	text-align: center;
 	display: block;
 	position: absolute;
@@ -94,6 +93,7 @@ p {
 	display: block;
 	width: 100%;
 	height: 124px;
+	position: relative;
 	-webkit-animation: make-wave-2 50s linear infinite;
 	animation: make-wave-2 50s linear infinite; }
 
@@ -247,11 +247,8 @@ p {
 #curve_chart { width: 100%; }
 
 
-@media all and (width: 360px;) {
-	body {
-		overflow: none;
-		min-width: 360px;	}
+@media all and ( max-width : 480px ) {
 
-	p { font-size: 1.4em; }
+	body { overflow: none; }
 }
 

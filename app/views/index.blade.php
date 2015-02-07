@@ -11,7 +11,8 @@
 		<link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 
 
-		<meta name="viewport" content="width=device-width,initial-scale=1"/>
+		
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="{{ url('/') }}" />
