@@ -10,6 +10,9 @@
 		<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 		<link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 
+
+		<meta name="viewport" content="width=device-width,initial-scale=1"/>
+
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="{{ url('/') }}" />
 		<meta property="og:description" 

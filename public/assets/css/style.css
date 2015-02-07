@@ -2,7 +2,6 @@
 
 body {
 	width: 100%;
-	min-width: 960px;
 	height: 100%;
 	background-color: rgb(67, 152, 205);
 	text-align: center;
@@ -246,3 +245,13 @@ p {
 }
 
 #curve_chart { width: 100%; }
+
+
+@media all and (width: 360px;) {
+	body {
+		overflow: none;
+		min-width: 360px;	}
+
+	p { font-size: 1.4em; }
+}
+
