@@ -250,5 +250,7 @@ p {
 @media all and ( max-width : 480px ) {
 
 	body { overflow: none; }
+
+	.ruler { height: 200px; }
 }
 
