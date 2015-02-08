@@ -255,6 +255,7 @@ p {
 
 	.copyright { 
 		right: 0;
-		width: 88%; }
+		width: 88%;
+		font-size: .7em; }
 }
 
