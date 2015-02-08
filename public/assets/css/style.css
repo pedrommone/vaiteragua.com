@@ -252,5 +252,9 @@ p {
 	body { overflow: none; }
 
 	.ruler { height: 200px; }
+
+	.copyright { 
+		right: 0;
+		width: 88%; }
 }
 
