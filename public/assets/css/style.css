@@ -23,7 +23,7 @@ p {
 
 .water {
 	background-color: rgb(23, 92, 160);
-	height: 260px;
+	height: 310px;
 	width: 100%;
 	text-align: center;
 	display: block;
@@ -31,14 +31,14 @@ p {
 	bottom: 0;	}
 
 .ruler { 
-	width: 40px;
-	height: 400px;
-	background-color: #fff;
+	width: 70px;
+	height: 347px;
+	background: url('../img/ruler.png');
 	border-radius: 2px;
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	z-index: 9999; }
+	z-index: 9; }
 
 .btn {
 	height: 45px;
@@ -251,11 +251,20 @@ p {
 
 	body { overflow: none; }
 
-	.ruler { height: 200px; }
+	.ruler { 
+		height: 200px;
+		width: 40px;
+		background: url('../img/ruler-mobile.png'); }
 
 	.copyright { 
 		right: 0;
 		width: 88%;
 		font-size: .7em; }
+
+	.water { height: 200px; }
+
+		.modal-dialog { 
+			margin-left: -178px;
+			width: 356px; }
 }
 

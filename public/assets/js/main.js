@@ -9,7 +9,7 @@ ga('send', 'pageview');
 var body 		= document.querySelector('body')
   , drop 		= document.querySelector('.drop')
   , water 		= document.querySelector('.water')
-  , max_water	= 260;
+  , max_water	= parseInt(window.getComputedStyle(water).getPropertyValue('height'));
 
 body.onmousemove = function() {
 
@@ -26,7 +26,7 @@ var update_current_status = function() {
 		var data = JSON.parse(xhr.responseText).data;
 
 		drop.innerHTML = parseFloat(Math.round(data.percentage * 100) / 100).toFixed(1) + "%";
-		water.style.height = (max_water * data.percentage) / 100 + "px";
+		water.style.height = ((max_water * data.percentage) / 100) - 11 + "px";
 	};
 
 	xhr.send();
