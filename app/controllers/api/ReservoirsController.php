@@ -64,7 +64,7 @@ class ReservoirsController extends \Controller {
 		];
 
 		$geral = WatershedStatus::
-			    orderBy('created_at', 'asc')
+			  orderBy('created_at', 'asc')
 			->take(30)
 			->get();
 

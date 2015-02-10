@@ -1,6 +1,10 @@
 <?php
 
+use Illuminate\Database\Eloquent\SoftDeletingTrait;
+
 class HydrographicVessel extends Eloquent {
+
+	use SoftDeletingTrait;
 	
 	public $table = 'hydrographic_reservoirs';
 
