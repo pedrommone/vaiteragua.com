@@ -28,13 +28,13 @@ class CrawlWatershed extends Command {
 			$crawler = $client->request('GET', 'http://www.copasatransparente.com.br/index.php/nivel-dos-reservatorios/');
 			
 			// Filter and get our information
-			$crawln = $crawler->filterXPath('//*[@id="post-24"]/div/div[2]/p[1]/strong')->text();
+			$crawln = $crawler->filterXPath('//*[@id="post-24"]/div/div[2]/table[1]/tbody/tr[2]/td[4]')->text();
 
 			// Make use of regex!
-			preg_match_all("/\(atualizado em (.*)\/(.*)\/(.*)\): (.*)%/", $crawln, $parse_crawln);
+			preg_match_all("/(.*)%/", $crawln, $parse_crawln);
 
 			// Format it to US standard
-			$parse_crawln = (double) str_replace(',', '.', $parse_crawln[4])[0];
+			$parse_crawln = (double) str_replace(',', '.', $parse_crawln[1][0]);
 
 			// Now, lets store it into our database.
 			$watershed_status = new WatershedStatus;
@@ -46,7 +46,7 @@ class CrawlWatershed extends Command {
 		catch (Exception $e)
 		{
 
-			$this->error('Error on watershed clawln procedure: ' . $e->getMessage());
+			$this->error('Error on watershed crawnl procedure: ' . $e->getMessage());
 		}
 	}
 }

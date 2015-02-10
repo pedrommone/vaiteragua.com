@@ -18,54 +18,72 @@ class ReservoirsWatershed extends Command {
 		parent::__construct();
 	}
 
-	public function fire()
+	private function parseFromCopasa($xpath)
 	{
 
 		try
 		{
-
-			$crawln_vessels = [];
 
 			// Make request agains Copasa
 			$client = new Client();
 			$crawler = $client->request('GET', 'http://www.copasatransparente.com.br/index.php/nivel-dos-reservatorios/');
 			
 			// Filter and get our information
-			$crawln = $crawler->filterXPath('//*[@id="post-24"]/div/div[2]/div[1]/ul[1]/li/strong')->each(function(Crawler $node, $i) use (&$crawln_vessels)
-			{
+			$crawln = $crawler->filterXPath($xpath)->text();
 
-				// Make a regex and get usable data.
-				preg_match_all("/(.*): (.*)%/", $node->text(), $parse_crawln);
+			// Make use of regex!
+			preg_match_all("/(.*)%/", $crawln, $parse_crawln);
 
-				// Format it to US standard
-				$percentage = (double) str_replace(',', '.', $parse_crawln[2])[0];
+			// Format it to US standard
+			$parse_crawln = (double) str_replace(',', '.', $parse_crawln[1][0]);
 
-				$crawln_vessels[] = [
-					'description' => $parse_crawln[1][0],
-					'percentage' => $percentage
-				];
-			});
-
-			// Store it on database
-			foreach ($crawln_vessels as $vessel)
-			{
-
-				// Find or creatre a vessel
-				$q = $hydrographic_vessel = HydrographicVessel::firstOrCreate([
-					'description' => $vessel['description']
-				]);
-
-				$q->status()->save(new HydrographicVesselStatus([
-					'percentage' => $vessel['percentage']
-				]));
-			}
-
-			$this->info(count($crawln_vessels) . ' eservoir(s) has been updated');
+			return $parse_crawln;
 		}
 		catch (Exception $e)
 		{
 
-			$this->error('Error on watershed clawln procedure: ' . $e->getMessage());
+			$this->error('Error on watershed crawnl procedure: ' . $e->getMessage());
+		}
+	}
+
+	public function fire()
+	{
+
+		try
+		{
+
+			// Store xpath and names
+			$vessels = [
+				'Rio Manso' => '//*[@id="post-24"]/div/div[2]/table[1]/tbody/tr[3]/td[4]',
+				'Serra Azul' => '//*[@id="post-24"]/div/div[2]/table[1]/tbody/tr[4]/td[4]',
+				'Vargem das Flores' => '//*[@id="post-24"]/div/div[2]/table[1]/tbody/tr[5]/td[4]'
+			];
+
+			// Store it on database
+			foreach ($vessels as $vessel => $xpath)
+			{
+
+				// Parse from copasa
+				$status = $this->parseFromCopasa($xpath);
+
+				// Find or creatre a vessel
+				$q = $hydrographic_vessel = HydrographicVessel::firstOrCreate([
+					'description' => $vessel
+				]);
+
+				$q->status()->save(new HydrographicVesselStatus([
+					'percentage' => $status
+				]));
+
+				$this->info("$vessel has now $status%.");
+			}
+			
+			$this->info(count($vessels) . ' reservoir(s) has been updated');
+		}
+		catch (Exception $e)
+		{
+
+			$this->error('Error on watershed crawnl procedure: ' . $e->getMessage());
 		}
 	}
 }
