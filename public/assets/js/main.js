@@ -6,14 +6,17 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-59389995-1', 'auto');
 ga('send', 'pageview');
 
-var body 		= document.querySelector('body')
+var body 		= document.querySelector('html')
   , drop 		= document.querySelector('.drop')
   , water 		= document.querySelector('.water')
   , max_water	= parseInt(window.getComputedStyle(water).getPropertyValue('height'));
 
-body.onmousemove = function() {
+body.onmousemove = function(e) {
 
-	drop.style.left = (window.event.clientX - 43) + 'px';
+	var e = e || window.event;
+	var o = e.srcElement || e.target;
+
+	drop.style.left = (e.clientX - 43) + 'px';
 };
 
 var update_current_status = function() {
