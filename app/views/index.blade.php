@@ -61,7 +61,7 @@
 		<a href="#history" class="btn">Ver histórico</a>
 		<div class="ruler"></div>
 
-		<p class="copyright">O vaiteragua.com é um projeto <a href="http://github.com/pedrommone/vaiteragua.com">open-source.</a> Todos os dados apresentados são coletados do site de <a href="www.copasatransparente.com.br">transparência da Copasa.</a></p>
+		<p class="copyright">O vaiteragua.com é um projeto <a href="http://github.com/pedrommone/vaiteragua.com">open-source.</a> Todos os dados apresentados são coletados do site de <a href="http://www.copasatransparente.com.br">transparência da Copasa.</a></p>
 
 		<script> var base_url = "{{ url('/') }}"; </script>
 		<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart']}]}"></script>
