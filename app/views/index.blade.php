@@ -17,7 +17,7 @@
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="{{ url('/') }}" />
 		<meta property="og:description" 
-			content="Veja o volume de água dos reservatórios da Região Metropolitana e faça sua parte para dizermos juntos que vai ter água." />
+			content="Veja o volume de água dos reservatórios da Região Metropolitana de Belo Horizonte e faça sua parte para dizermos juntos que vai ter água." />
 		<meta property="og:locale" content="pt_br" />
 		<meta property="og:site_name" content="Vai ter água" />
 		<meta property="og:title" content="Vai ter água" />
