@@ -64,5 +64,9 @@
 		<script> var base_url = "{{ url('/') }}"; </script>
 		<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart']}]}"></script>
 		<script src="{{ asset('assets/js/main.js') }}"></script>
+
+		@if (App::environment('production'))
+			<script src="//d2wy8f7a9ursnm.cloudfront.net/bugsnag-2.min.js" data-apikey="{{ $_ENV['BUGSNAG_KEY'] }}"></script>
+		@endif
 	</body>
 </html>

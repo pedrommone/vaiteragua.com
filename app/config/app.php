@@ -121,7 +121,8 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-		'Dingo\Api\Provider\ApiServiceProvider'
+		'Dingo\Api\Provider\ApiServiceProvider',
+		'Bugsnag\BugsnagLaravel\BugsnagLaravelServiceProvider',
 
 	),
 
@@ -189,7 +190,8 @@ return array(
 		'URL'               => 'Illuminate\Support\Facades\URL',
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
-		'API'               => 'Dingo\Api\Facade\API'
+		'API'               => 'Dingo\Api\Facade\API',
+		'Bugsnag' 			  => 'Bugsnag\BugsnagLaravel\BugsnagFacade',
 
 	),
 
