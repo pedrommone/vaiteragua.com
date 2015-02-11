@@ -43,7 +43,7 @@
 		<!-- /Modal -->
 
 		<img src="{{ asset('assets/img/vaiteragua.png') }}" class="brand" alt="">
-		<p>Se todo mundo colaborar não vai faltar pra ninguém</p>
+		<p>Se todo mundo colaborar, não vai faltar para ninguém</p>
 
 		<section class="water">
 			<div class="mouse-drop">
