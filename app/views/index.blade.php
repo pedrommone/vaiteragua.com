@@ -57,6 +57,8 @@
 		</section>
 
 		<a href="#history" class="btn">Ver histórico</a>
+		<br>
+		<div class="fb-like" data-href="https://www.facebook.com/vaiteragua?ref=br_tf" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
 		<div class="ruler"></div>
 
 		<p class="copyright">O vaiteragua.com é um projeto <a href="http://github.com/pedrommone/vaiteragua.com">open-source.</a> Todos os dados apresentados são coletados do site de <a href="http://www.copasatransparente.com.br">transparência da Copasa.</a></p>
@@ -68,5 +70,14 @@
 		@if (App::environment('production'))
 			<script src="//d2wy8f7a9ursnm.cloudfront.net/bugsnag-2.min.js" data-apikey="{{ $_ENV['BUGSNAG_KEY'] }}"></script>
 		@endif
+
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=967323029949505&version=v2.0";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 	</body>
 </html>
