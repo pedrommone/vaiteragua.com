@@ -123,7 +123,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Dingo\Api\Provider\ApiServiceProvider',
 		'Bugsnag\BugsnagLaravel\BugsnagLaravelServiceProvider',
-
+		'Roumen\Sitemap\SitemapServiceProvider',
 	),
 
 	/*

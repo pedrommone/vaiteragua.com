@@ -17,6 +17,21 @@ Route::get('/', function()
 	return View::make('index');
 });
 
+Route::get('sitemap.xml', function()
+{
+
+	$sitemap = App::make("sitemap");
+	$sitemap->setCache('laravel.sitemap', 3600);
+
+	if ( ! $sitemap->isCached())
+	{
+
+		$sitemap->add(URL::to('/'), '2015-01-10T00:00:00+02:00', '1.0', 'daily');
+	}
+
+	return $sitemap->render('xml');
+});
+
 Route::group(['prefix' => 'api'], function()
 {
 
