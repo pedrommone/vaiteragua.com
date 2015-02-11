@@ -10,6 +10,16 @@
 		<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 		<link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 
+		<link rel="apple-touch-icon" sizes="60x60" href="{{ asset('assets/img/apple/apple-touch-icon-60.png') }}">
+		<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('assets/img/apple/apple-touch-icon-57.png') }}">
+		<link rel="apple-touch-icon" sizes="72x72" href="{{ asset('assets/img/apple/apple-touch-icon-72.png') }}">    
+		<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assets/img/apple/apple-touch-icon-76.png') }}">
+		<link rel="apple-touch-icon" sizes="114x114" href="{{ asset('assets/img/apple/apple-touch-icon-114.png') }}">
+		<link rel="apple-touch-icon" sizes="120x120" href="{{ asset('assets/img/apple/apple-touch-icon-120.png') }}">
+		<link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/img/apple/apple-touch-icon-144.png') }}">
+		<link rel="apple-touch-icon" sizes="152x152" href="{{ asset('assets/img/apple/apple-touch-icon-152.png') }}">
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/apple/apple-touch-icon-180.png') }}">
+
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 
 		<meta property="og:type" content="website" />
