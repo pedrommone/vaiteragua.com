@@ -91,7 +91,7 @@ class ReservoirsController extends \Controller {
 		// Get general data
 		foreach ($geral as $row)
 			
-			$data[$row->created_at->format('d/m/y')][1]  = (double) $row->percentage;
+			$data[$row->created_at->format('d/m/y')][1] = (double) $row->percentage;
 
 		// Populate data
 		foreach ($status as $row)
