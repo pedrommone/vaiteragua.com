@@ -7,7 +7,7 @@ use \VesselHistoryTransformer;
 use \GoogleChartTransformer;
 use \ReservoirsTransformer;
 use \HydrographicVessel;
-use WatershedStatus;
+use \WatershedStatus;
 use \Carbon\Carbon;
 
 class ReservoirsController extends \Controller {
@@ -50,8 +50,10 @@ class ReservoirsController extends \Controller {
 
 		$status = HydrographicVessel::with(['status' => function($query) {
 
-			$query->orderBy('created_at', 'asc')
-				->take(30);
+			$query
+				->groupBy('created_at')
+				->whereBetween('created_at', [Carbon::now()->subDays(30), Carbon::now()])
+				->orderBy('created_at', 'asc');
 		}])
 			->get();
 
@@ -64,8 +66,9 @@ class ReservoirsController extends \Controller {
 		];
 
 		$geral = WatershedStatus::
-			  orderBy('created_at', 'asc')
-			->take(30)
+			  groupBy('created_at')
+			->orderBy('created_at', 'asc')
+			->whereBetween('created_at', [Carbon::now()->subDays(30), Carbon::now()])
 			->get();
 
 		// Index dates
@@ -98,6 +101,7 @@ class ReservoirsController extends \Controller {
 		{
 
 			$aux_colun = array_search($row->description, $data['columns']);
+
 
 			foreach ($row->status as $point)
 			{
