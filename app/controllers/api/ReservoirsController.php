@@ -33,8 +33,9 @@ class ReservoirsController extends \Controller {
 
 		$history = HydrographicVessel::with(['status' => function($query) {
 
-			$query->orderBy('created_at', 'asc')
-				->take(30);
+			$query
+				->whereBetween('created_at', [Carbon::now()->subDays(30), Carbon::now()])
+				->orderBy('created_at', 'asc');
 		}])
 			->findOrFail($id)
 			->status;
@@ -51,7 +52,6 @@ class ReservoirsController extends \Controller {
 		$status = HydrographicVessel::with(['status' => function($query) {
 
 			$query
-				->groupBy('created_at')
 				->whereBetween('created_at', [Carbon::now()->subDays(30), Carbon::now()])
 				->orderBy('created_at', 'asc');
 		}])
@@ -66,8 +66,7 @@ class ReservoirsController extends \Controller {
 		];
 
 		$geral = WatershedStatus::
-			  groupBy('created_at')
-			->orderBy('created_at', 'asc')
+			  orderBy('created_at', 'asc')
 			->whereBetween('created_at', [Carbon::now()->subDays(30), Carbon::now()])
 			->get();
 

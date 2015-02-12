@@ -31,8 +31,7 @@ class WatershedController extends \Controller {
 	{
 
 		$watershed_status = WatershedStatus::
-			  groupBy('created_at')
-			->whereBetween('created_at', [Carbon::now()->subDays(30), Carbon::now()])
+			  whereBetween('created_at', [Carbon::now()->subDays(30), Carbon::now()])
 			->orderBy('created_at', 'asc')
 			->get();
 
