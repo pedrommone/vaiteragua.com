@@ -57,6 +57,9 @@ Route::group(['prefix' => 'api'], function()
 	});
 });
 
+// Shortcut to verify number
+Route::get('v/{token}', 'ReportsController@getVerify');
+
 Route::group(['prefix' => 'reports'], function()
 {
 

@@ -18,7 +18,7 @@ class ReportsController extends BaseController {
 			Queue::push('WhatsAppQueue@fire', [
 				"number" => "55" . $telephone->number,
 				"msg" => "Obrigado por se increver na nossa lista de relatórios!\n\n" .
-					    "Precisamos que você valide o seu número, acesse o endereço " . url('/reports/' . Hashids::encode($telephone->id) . '/verify') . " e confirme o seu telefone.\n\n" .
+					    "Precisamos que você valide o seu número, acesse o endereço " . url('/v/' . Hashids::encode($telephone->id)) . " e confirme o seu telefone.\n\n" .
 					    "Não se preocupe, não enviamos spam :)"
 			]);
 
