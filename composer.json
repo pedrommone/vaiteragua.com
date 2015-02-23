@@ -9,7 +9,9 @@
 		"fabpot/goutte": "2.0.*@dev",
 		"dingo/api": "0.8.*",
 		"bugsnag/bugsnag-laravel": "1.*",
-		"roumen/sitemap": "~2.4"
+		"roumen/sitemap": "~2.4",
+		"mgp25/whatsapi": "@dev",
+		"williamson/larawhatsapi": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
