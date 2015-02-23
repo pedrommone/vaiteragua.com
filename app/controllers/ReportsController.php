@@ -75,8 +75,7 @@ class ReportsController extends BaseController {
 
 			$id = Hashids::decode($hash);
 
-			$telephone = Telephone::findOrFail( (int) $id[0])
-				->delete();
+			$telephone = Telephone::findOrFail( (int) $id[0]);
 
 			$thankyou = "Você foi removido com sucesso. Espero que nossos envios tenham sido úteis.";
 
@@ -84,6 +83,8 @@ class ReportsController extends BaseController {
 				"number" => "55" . $telephone->number,
 				"msg" => $thankyou
 			]);
+
+			$telephone->delete();
 
 			return $thankyou;
 		}
