@@ -44,7 +44,7 @@ class ReportsController extends BaseController {
 
 			$id = Hashids::decode($hash);
 
-			$telephone = Telephone::findOrFail( (int) $id);
+			$telephone = Telephone::findOrFail( (int) $id[0]);
 			$telephone->verified_at = new Carbon;
 			$telephone->save();
 
@@ -75,7 +75,7 @@ class ReportsController extends BaseController {
 
 			$id = Hashids::decode($hash);
 
-			$telephone = Telephone::findOrFail( (int) $id)
+			$telephone = Telephone::findOrFail( (int) $id[0])
 				->delete();
 
 			$thankyou = "Você foi removido com sucesso. Espero que nossos envios tenham sido úteis.";
