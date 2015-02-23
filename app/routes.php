@@ -57,20 +57,10 @@ Route::group(['prefix' => 'api'], function()
 	});
 });
 
-Route::get('wpp', function()
+Route::group(['prefix' => 'reports'], function()
 {
 
-	$username = "14387001374";
-	$identity = "%f1%e9%12%1f%b3%f1m%cc%dc%7b%14j%99m%f0%3d%11%06%b3%2e";
-	$nickname = "Vai ter agua";
-	$password = "jrotTvQe4sfZpB5d6rCUDXPDv7g=";
-	$debug = true;
-
-	// Create a instance of WhastPort.
-	$w = new WhatsProt($username, $identity, $nickname, $debug);
-
-	$w->connect(); // Connect to WhatsApp network
-	$w->loginWithPassword($password); // logging in with the password we got!
-
-	$w->sendMessage("553199821215" , "Eae babaca.");
+	Route::get('signup', 'ReportsController@getSignup');
+	Route::get('{token}/verify', 'ReportsController@getVerifty');
+	Route::get('{token}/remove', 'ReportsController@getRemove');
 });

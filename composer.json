@@ -11,7 +11,8 @@
 		"bugsnag/bugsnag-laravel": "1.*",
 		"roumen/sitemap": "~2.4",
 		"mgp25/whatsapi": "@dev",
-		"williamson/larawhatsapi": "dev-master"
+		"williamson/larawhatsapi": "dev-master",
+		"mitch/hashids": "1.x"
 	},
 	"autoload": {
 		"classmap": [
