@@ -60,7 +60,7 @@ Route::group(['prefix' => 'api'], function()
 Route::group(['prefix' => 'reports'], function()
 {
 
-	Route::get('signup', 'ReportsController@getSignup');
-	Route::get('{token}/verify', 'ReportsController@getVerifty');
+	Route::post('signup', 'ReportsController@postSignup');
+	Route::get('{token}/verify', 'ReportsController@getVerify');
 	Route::get('{token}/remove', 'ReportsController@getRemove');
 });

@@ -16,6 +16,7 @@ ClassLoader::addDirectories(array(
 	app_path().'/commands',
 	app_path().'/controllers',
 	app_path().'/models',
+	app_path().'/queues',
 	app_path().'/database/seeds',
 	app_path().'/transformers'
 
@@ -65,6 +66,7 @@ App::error(function(Exception $exception, $code)
 
 App::down(function()
 {
+	
 	return Response::make("Estamos atualizando o site, não deve demorar mais do que 10 segundos!", 503);
 });
 

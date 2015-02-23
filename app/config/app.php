@@ -124,7 +124,8 @@ return array(
 		'Dingo\Api\Provider\ApiServiceProvider',
 		'Bugsnag\BugsnagLaravel\BugsnagLaravelServiceProvider',
 		'Roumen\Sitemap\SitemapServiceProvider',
-		'Williamson\Larawhatsapi\LaraWhatsapiServiceProvider'
+		'Williamson\Larawhatsapi\LaraWhatsapiServiceProvider',
+		'Mitch\Hashids\HashidsServiceProvider'
 	),
 
 	/*
@@ -193,7 +194,8 @@ return array(
 		'View'              => 'Illuminate\Support\Facades\View',
 		'API'               => 'Dingo\Api\Facade\API',
 		'Bugsnag' 			  => 'Bugsnag\BugsnagLaravel\BugsnagFacade',
-
+		'Hashids' => 'Mitch\Hashids\Hashids',
+		'Carbon' => 'Carbon\Carbon'
 	),
 
 );
