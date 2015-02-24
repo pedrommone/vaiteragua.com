@@ -65,7 +65,7 @@ class ReportsController extends BaseController {
 
 			Log::error($e->getMessage());
 
-			return "Ocorrou algum erro ao verificar o número fornecido.";
+			return "Ocorreu algum erro ao verificar o número fornecido.";
 		}
 	}
 
@@ -96,7 +96,7 @@ class ReportsController extends BaseController {
 
 			Log::error($e->getMessage());
 
-			return "Ocorrou algum erro ao remover o número fornecido.";
+			return "Ocorreu algum erro ao remover o número fornecido. Caso o erro persista, Mande um e-mail para contato@vaiteragua.com reportando o erro. ;)";
 		}
 	}
 }
