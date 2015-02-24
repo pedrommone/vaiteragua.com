@@ -269,29 +269,32 @@ p {
 
 .btn-whatsapp { margin-bottom: 15px; }
 
-
 @media all and ( max-width : 480px ) {
 
 	body { overflow: none; }
 
-	.ruler { 
-		height: 200px;
-		width: 40px;
-		background: url('../img/ruler-mobile.png'); }
+	.ruler { display: none; }
 
-	.copyright { 
-		right: 0;
-		width: 88%;
-		font-size: .7em; }
+	p {
+		font-size: 1.4em;
+		margin-top: 10px;
+		margin-bottom: 10px;	}
+
+	.copyright {
+		width: 100%;
+		font-size: .7em;
+		bottom: 0; }
 
 	.water { height: 200px; }
 
-		.modal-dialog { 
-			margin-left: -178px;
-			width: 356px; }
+	.modal-dialog { 
+		margin-left: -178px;
+		width: 356px; }
 
-	.btn {	margin-top: 10px;	}
+	.btn {
+		margin-top: 0px;
+		width: 90%;
+		margin-bottom: 5px; }
 	
-	.btn-whatsapp { margin-left: 5px; }
+	.btn-whatsapp { margin-left: 2px; }
 }
-
