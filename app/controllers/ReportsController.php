@@ -5,6 +5,9 @@ class ReportsController extends BaseController {
 	public function postSignup()
 	{
 
+		// Work around, since eloquent methods ignore mutators.
+		Input::merge(['telephone' => str_replace([" ", "-", "(", ")", "+"], "", Input::get('telephone'))]);
+
 		$validator = Validator::make(Input::all(), [
 			'number' => 'required'
 		]);

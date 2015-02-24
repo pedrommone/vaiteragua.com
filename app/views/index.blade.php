@@ -53,12 +53,11 @@
 		</div>
 		<!-- /Modal -->
 
-
 		<!-- Modal graficos-->
 		<div class="modal" id="whatsapp" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-header">
-					<h2>Quer saber todos os dias o nível da água?</h2>
+					<h2>Cadastre e receba relatórios diários sobre o estado da água.</h2>
 					<a href="#close" class="btn-close" aria-hidden="true">×</a>
 				</div>
 
@@ -90,7 +89,7 @@
 		</section>
 
 		<a href="#history" class="btn">Ver histórico</a>
-		<!-- <a href="#whatsapp" class="btn bg-green btn-whatsapp">Notificar via WhatsApp</a> -->
+		<a href="#whatsapp" class="btn bg-green btn-whatsapp">Notificar via WhatsApp</a>
 		<br>
 		<div class="fb-like" data-href="https://www.facebook.com/vaiteragua?ref=br_tf" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
 		<div class="ruler"></div>

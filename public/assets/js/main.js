@@ -71,39 +71,29 @@ update_current_status();
 google.setOnLoadCallback(drawChart);
 
 
-$(document).ready(function(){
-	 $(".input-form").intlTelInput({
-	 	defaultCountry: "auto",
-	 	utilsScript: "assets/js/utils.js"
-	 });
+$(document).ready(function() {
+
+	$(".input-form").intlTelInput({
+		defaultCountry: "auto",
+		utilsScript: "assets/js/utils.js"
+	});
 });
 
 
 var singup = function(number) {
 
-		var xhr = new XMLHttpRequest();
-		xhr.open("POST", base_url + '/reports/signup');
-
-		xhr.onload = function(e) {
-
-			var data = xhr.responseText;
-			console.log(data);
-		};
-
-		xhr.send('number=' + number);
+	var xhr = new XMLHttpRequest();
+	xhr.open("POST", base_url + '/reports/signup');
+	xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+	xhr.send('number=' + number);
 };
-
 
 var btSingup = document.getElementById('btSingup');
 
-
 btSingup.onclick = function() {
+
 	var inputNumber = $(".input-form").intlTelInput("getNumber");
+	
 	inputNumber = inputNumber.slice(3, inputNumber.length);
-	console.log(inputNumber);
 	singup(inputNumber);
 };
-
-
-
-
