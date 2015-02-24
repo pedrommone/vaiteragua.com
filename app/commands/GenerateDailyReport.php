@@ -48,7 +48,7 @@ class GenerateDailyReport extends Command {
 		if ($general_newest->percentage < $general_oldest->percentage)
 		{
 
-			$msg = "Caiu! Ajude na campanha, compartilhe! Perdemos $general_diff ponto(s) percentuais.";
+			$msg = "O nível caiu! Compartilhe vaiteragua.com com seus amigos e ajude a espalhar esta campanha! Perdemos $general_diff ponto(s) percentuais.";
 		}
 
 		$targets = Telephone::
