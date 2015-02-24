@@ -43,15 +43,16 @@ p {
 .btn {
 	height: 45px;
 	width: 198px;
-	background-color: rgb(218, 95, 31);
 	color: #fff;
 	line-height: 45px;
 	border-radius: 4px;
 	display: inline-block;
+	background-color: rgb(218, 95, 31); 
 	margin-top: 25px;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 2px 0px;
 	box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 2px 0px;
-	text-decoration: none; }
+	text-decoration: none;
+	margin-bottom: 15px; }
 
 .btn:hover { background-color: rgb(240, 128, 70); }
 
@@ -224,10 +225,30 @@ p {
 	display: none;
 }
 
-.btn-fechar {
+.btn-modal {
 	width: 70px;
 	text-align: center;
-	margin-right: -10px;
+	margin-right: -10px; }
+
+.btn-fechar {
+	background-color: rgb(218, 95, 31); }
+
+.btn-salvar {
+	width: 90px;
+}
+
+.bg-green { background-color: #5cb85c; }
+
+.bg-green:hover{
+	opacity: 0.8;
+	background-color: #5cb85c;		
+}
+
+.input-form {
+	border: 1px solid transparent;
+	height: 40px;
+	outline: none;
+	font-size: 20px;
 }
 
 .copyright {
@@ -246,7 +267,7 @@ p {
 
 #curve_chart { width: 100%; }
 
-.fb-like { margin-top: 20px; }
+.btn-whatsapp { margin-bottom: 15px; }
 
 
 @media all and ( max-width : 480px ) {
@@ -268,5 +289,9 @@ p {
 		.modal-dialog { 
 			margin-left: -178px;
 			width: 356px; }
+
+	.btn {	margin-top: 10px;	}
+	
+	.btn-whatsapp { margin-left: 5px; }
 }
 

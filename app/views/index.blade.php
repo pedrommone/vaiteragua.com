@@ -5,6 +5,7 @@
 		<title>Vai ter água</title>
 
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Play" type="text/css">
+		<link rel="stylesheet" href="{{ asset('assets/css/intlTelInput.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
 		<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
@@ -33,7 +34,7 @@
 	</head>
 
 	<body>
-		<!-- Modal -->
+		<!-- Modal graficos-->
 		<div class="modal" id="history" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-header">
@@ -46,7 +47,29 @@
 				</div>
 
 				<div class="modal-footer">
-					<a href="#close" class="btn btn-fechar">Fechar</a>
+					<a href="#close" class="btn btn-modal btn-fechar">Fechar</a>
+				</div>
+			</div>
+		</div>
+		<!-- /Modal -->
+
+
+		<!-- Modal graficos-->
+		<div class="modal" id="whatsapp" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-header">
+					<h2>Quer saber todos os dias o nível da água?</h2>
+					<a href="#close" class="btn-close" aria-hidden="true">×</a>
+				</div>
+
+				<div class="modal-body">
+					<form action="" class="form-control">
+						<input type="tel" placeholder="(99) 9999-9999" id="inputNumber" class="input-form">
+					</form>
+				</div>
+
+				<div class="modal-footer">
+					<a href="#" class="btn btn-modal btn-salvar bg-green" id="btSingup">Manda lá!</a>
 				</div>
 			</div>
 		</div>
@@ -67,6 +90,7 @@
 		</section>
 
 		<a href="#history" class="btn">Ver histórico</a>
+		<!-- <a href="#whatsapp" class="btn bg-green btn-whatsapp">Notificar via WhatsApp</a> -->
 		<br>
 		<div class="fb-like" data-href="https://www.facebook.com/vaiteragua?ref=br_tf" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
 		<div class="ruler"></div>
@@ -75,6 +99,8 @@
 
 		<script> var base_url = "{{ url('/') }}"; </script>
 		<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart']}]}"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="{{ asset('assets/js/intlTelInput.min.js') }}"></script>
 		<script src="{{ asset('assets/js/main.js') }}"></script>
 
 		@if (App::environment('production'))
