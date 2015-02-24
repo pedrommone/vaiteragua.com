@@ -12,7 +12,7 @@
 		"roumen/sitemap": "~2.4",
 		"mgp25/whatsapi": "@dev",
 		"mitch/hashids": "1.x",
-		"iron-io/iron_mq": "~3.0"
+		"iron-io/iron_mq": "2.0.0"
 	},
 	"autoload": {
 		"classmap": [

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "57f459b29473b7081b285dbe35b348fd",
+    "hash": "918fca29ad4e943293d9b1e19ccf16b3",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -615,16 +615,16 @@
         },
         {
             "name": "iron-io/iron_core",
-            "version": "0.2.2",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/iron-io/iron_core_php.git",
-                "reference": "d5afdccb6aea2ce7c71cf9eedabc81dc3771af19"
+                "reference": "650565e8ef855c53e6a9a3099fb22b76778a81a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iron-io/iron_core_php/zipball/d5afdccb6aea2ce7c71cf9eedabc81dc3771af19",
-                "reference": "d5afdccb6aea2ce7c71cf9eedabc81dc3771af19",
+                "url": "https://api.github.com/repos/iron-io/iron_core_php/zipball/650565e8ef855c53e6a9a3099fb22b76778a81a8",
+                "reference": "650565e8ef855c53e6a9a3099fb22b76778a81a8",
                 "shasum": ""
             },
             "require": {
@@ -632,9 +632,9 @@
             },
             "type": "library",
             "autoload": {
-                "classmap": [
-                    "IronCore.class.php"
-                ]
+                "psr-4": {
+                    "IronCore\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -652,6 +652,10 @@
                     "email": "support@iron.io",
                     "homepage": "http://iron.io",
                     "role": "Developer"
+                },
+                {
+                    "name": "Tino Ehrich",
+                    "email": "tino@bigpun.me"
                 }
             ],
             "description": "Collection of common functions for all iron.io client libraries",
@@ -660,31 +664,31 @@
                 "iron",
                 "iron_core"
             ],
-            "time": "2014-11-11 11:18:17"
+            "time": "2015-02-12 19:54:09"
         },
         {
             "name": "iron-io/iron_mq",
-            "version": "3.0.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/iron-io/iron_mq_php.git",
-                "reference": "128a761b33ad8631e2f208ec1a598cb40b082c42"
+                "reference": "9906a59885c8b715ac77346b1538a8a1c60300e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iron-io/iron_mq_php/zipball/128a761b33ad8631e2f208ec1a598cb40b082c42",
-                "reference": "128a761b33ad8631e2f208ec1a598cb40b082c42",
+                "url": "https://api.github.com/repos/iron-io/iron_mq_php/zipball/9906a59885c8b715ac77346b1538a8a1c60300e1",
+                "reference": "9906a59885c8b715ac77346b1538a8a1c60300e1",
                 "shasum": ""
             },
             "require": {
-                "iron-io/iron_core": "0.*",
+                "iron-io/iron_core": "1.*",
                 "php": ">=5.2.0"
             },
             "type": "library",
             "autoload": {
-                "files": [
-                    "IronMQ.class.php"
-                ]
+                "psr-4": {
+                    "IronMQ\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -696,6 +700,10 @@
                     "email": "alexander@iron.io",
                     "homepage": "http://iron.io",
                     "role": "Developer"
+                },
+                {
+                    "name": "Tino Ehrich",
+                    "email": "tino@bigpun.me"
                 }
             ],
             "description": "Client binding for IronMQ (hosted message queue)",
@@ -705,7 +713,7 @@
                 "iron",
                 "iron_mq"
             ],
-            "time": "2015-02-12 20:13:13"
+            "time": "2015-02-12 20:05:42"
         },
         {
             "name": "jeremeamia/SuperClosure",
@@ -939,12 +947,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mgp25/WhatsAPI-Official.git",
-                "reference": "6a5d0c972788e639a3f61b1c896b280e4add341f"
+                "reference": "47b40de1039f25e83aed160794f0b13af79d42af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mgp25/WhatsAPI-Official/zipball/6a5d0c972788e639a3f61b1c896b280e4add341f",
-                "reference": "6a5d0c972788e639a3f61b1c896b280e4add341f",
+                "url": "https://api.github.com/repos/mgp25/WhatsAPI-Official/zipball/47b40de1039f25e83aed160794f0b13af79d42af",
+                "reference": "47b40de1039f25e83aed160794f0b13af79d42af",
                 "shasum": ""
             },
             "require": {
@@ -978,7 +986,7 @@
                 "sms",
                 "whatsapp"
             ],
-            "time": "2015-02-23 09:19:02"
+            "time": "2015-02-23 20:32:56"
         },
         {
             "name": "mitch/hashids",
@@ -2408,162 +2416,6 @@
             "description": "Symfony Translation Component",
             "homepage": "http://symfony.com",
             "time": "2015-01-03 15:23:51"
-        },
-        {
-            "name": "thomasvargiu/tmv-whatsapi",
-            "version": "v0.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thomasvargiu/TmvWhatsApi.git",
-                "reference": "3db9611b4fa821986dffb087f042eb3f216871ee"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thomasvargiu/TmvWhatsApi/zipball/3db9611b4fa821986dffb087f042eb3f216871ee",
-                "reference": "3db9611b4fa821986dffb087f042eb3f216871ee",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "php": ">=5.4",
-                "zendframework/zend-eventmanager": "~2.0",
-                "zendframework/zend-stdlib": "~2.0"
-            },
-            "require-dev": {
-                "fabpot/php-cs-fixer": "0.*@dev",
-                "mockery/mockery": "@stable",
-                "php-ffmpeg/php-ffmpeg": "0.5.*",
-                "phpmd/phpmd": "@stable",
-                "phpunit/phpunit": "@stable",
-                "satooshi/php-coveralls": "dev-master",
-                "squizlabs/php_codesniffer": "1.*"
-            },
-            "suggest": {
-                "ext-gd": "Allows icon generation for images",
-                "php-ffmpeg/php-ffmpeg": "Allows icon generation for videos"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Tmv\\WhatsApi\\": [
-                        "src/",
-                        "tests/unit/"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Thomas Vargiu",
-                    "email": "tommy@ttech.it",
-                    "homepage": "http://thomasvargiu.com"
-                }
-            ],
-            "description": "Full OOP library to communicate with WhatsApp service",
-            "keywords": [
-                "sms",
-                "whatsapi",
-                "whatsapp"
-            ],
-            "time": "2015-02-07 09:58:44"
-        },
-        {
-            "name": "zendframework/zend-eventmanager",
-            "version": "2.3.4",
-            "target-dir": "Zend/EventManager",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/Component_ZendEventManager.git",
-                "reference": "5992c202f13292415501aed41beba76404197866"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendEventManager/zipball/5992c202f13292415501aed41beba76404197866",
-                "reference": "5992c202f13292415501aed41beba76404197866",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.23",
-                "zendframework/zend-stdlib": "self.version"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.3-dev",
-                    "dev-develop": "2.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Zend\\EventManager\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "homepage": "https://github.com/zendframework/zf2",
-            "keywords": [
-                "eventmanager",
-                "zf2"
-            ],
-            "time": "2015-01-14 16:44:17"
-        },
-        {
-            "name": "zendframework/zend-stdlib",
-            "version": "2.3.4",
-            "target-dir": "Zend/Stdlib",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/Component_ZendStdlib.git",
-                "reference": "280e4ee6a8fea96b3de00a39174758b4002a7358"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/280e4ee6a8fea96b3de00a39174758b4002a7358",
-                "reference": "280e4ee6a8fea96b3de00a39174758b4002a7358",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.23"
-            },
-            "require-dev": {
-                "zendframework/zend-eventmanager": "self.version",
-                "zendframework/zend-filter": "self.version",
-                "zendframework/zend-serializer": "self.version",
-                "zendframework/zend-servicemanager": "self.version"
-            },
-            "suggest": {
-                "zendframework/zend-eventmanager": "To support aggregate hydrator usage",
-                "zendframework/zend-filter": "To support naming strategy hydrator usage",
-                "zendframework/zend-serializer": "Zend\\Serializer component",
-                "zendframework/zend-servicemanager": "To support hydrator plugin manager usage"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.3-dev",
-                    "dev-develop": "2.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Zend\\Stdlib\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "homepage": "https://github.com/zendframework/zf2",
-            "keywords": [
-                "stdlib",
-                "zf2"
-            ],
-            "time": "2015-01-14 16:44:17"
         }
     ],
     "packages-dev": [],
