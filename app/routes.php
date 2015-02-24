@@ -13,7 +13,7 @@
 
 Route::get('/', function() { return View::make('index'); });
 Route::get('v/{token}', 'ReportsController@getVerify');
-Route::get('queue', function() {  });
+Route::get('queue/receive', function() { return Queue::marshal(); });
 
 Route::get('sitemap.xml', function()
 {

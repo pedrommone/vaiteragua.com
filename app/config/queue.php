@@ -15,7 +15,7 @@ return array(
 	|
 	*/
 
-	'default' => 'sync',
+	'default' => 'iron',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -52,9 +52,9 @@ return array(
 		'iron' => array(
 			'driver'  => 'iron',
 			'host'    => 'mq-aws-us-east-1.iron.io',
-			'token'   => 'your-token',
-			'project' => 'your-project-id',
-			'queue'   => 'your-queue-name',
+			'token'   => 'kuaGrqnF9Q-C3gAg5w-iibvHtX4',
+			'project' => '54ebc45a5ab6470006000059',
+			'queue'   => 'vaiteragua-production',
 			'encrypt' => true,
 		),
 
