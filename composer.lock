@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "918fca29ad4e943293d9b1e19ccf16b3",
+    "hash": "dc4d8408d99b8141f855f487c1d3af8d",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -615,16 +615,16 @@
         },
         {
             "name": "iron-io/iron_core",
-            "version": "1.0.0",
+            "version": "0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/iron-io/iron_core_php.git",
-                "reference": "650565e8ef855c53e6a9a3099fb22b76778a81a8"
+                "reference": "d5afdccb6aea2ce7c71cf9eedabc81dc3771af19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iron-io/iron_core_php/zipball/650565e8ef855c53e6a9a3099fb22b76778a81a8",
-                "reference": "650565e8ef855c53e6a9a3099fb22b76778a81a8",
+                "url": "https://api.github.com/repos/iron-io/iron_core_php/zipball/d5afdccb6aea2ce7c71cf9eedabc81dc3771af19",
+                "reference": "d5afdccb6aea2ce7c71cf9eedabc81dc3771af19",
                 "shasum": ""
             },
             "require": {
@@ -632,9 +632,9 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "IronCore\\": "src/"
-                }
+                "classmap": [
+                    "IronCore.class.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -652,10 +652,6 @@
                     "email": "support@iron.io",
                     "homepage": "http://iron.io",
                     "role": "Developer"
-                },
-                {
-                    "name": "Tino Ehrich",
-                    "email": "tino@bigpun.me"
                 }
             ],
             "description": "Collection of common functions for all iron.io client libraries",
@@ -664,31 +660,31 @@
                 "iron",
                 "iron_core"
             ],
-            "time": "2015-02-12 19:54:09"
+            "time": "2014-11-11 11:18:17"
         },
         {
             "name": "iron-io/iron_mq",
-            "version": "2.0.0",
+            "version": "1.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/iron-io/iron_mq_php.git",
-                "reference": "9906a59885c8b715ac77346b1538a8a1c60300e1"
+                "reference": "90e796570f61b6e63b44296d7300747c51833b92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iron-io/iron_mq_php/zipball/9906a59885c8b715ac77346b1538a8a1c60300e1",
-                "reference": "9906a59885c8b715ac77346b1538a8a1c60300e1",
+                "url": "https://api.github.com/repos/iron-io/iron_mq_php/zipball/90e796570f61b6e63b44296d7300747c51833b92",
+                "reference": "90e796570f61b6e63b44296d7300747c51833b92",
                 "shasum": ""
             },
             "require": {
-                "iron-io/iron_core": "1.*",
+                "iron-io/iron_core": "0.*",
                 "php": ">=5.2.0"
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "IronMQ\\": "src/"
-                }
+                "files": [
+                    "IronMQ.class.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -700,10 +696,6 @@
                     "email": "alexander@iron.io",
                     "homepage": "http://iron.io",
                     "role": "Developer"
-                },
-                {
-                    "name": "Tino Ehrich",
-                    "email": "tino@bigpun.me"
                 }
             ],
             "description": "Client binding for IronMQ (hosted message queue)",
@@ -713,7 +705,7 @@
                 "iron",
                 "iron_mq"
             ],
-            "time": "2015-02-12 20:05:42"
+            "time": "2015-02-12 15:38:54"
         },
         {
             "name": "jeremeamia/SuperClosure",
