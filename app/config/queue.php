@@ -52,8 +52,8 @@ return array(
 		'iron' => array(
 			'driver'  => 'iron',
 			'host'    => 'mq-aws-us-east-1.iron.io',
-			'token'   => 'kuaGrqnF9Q-C3gAg5w-iibvHtX4',
-			'project' => '54ebc45a5ab6470006000059',
+			'token'   => $_ENV['IRONIO_TOKEN'],
+			'project' => $_ENV['IRONIO_PROJECT'],
 			'queue'   => 'vaiteragua-production',
 			'encrypt' => true,
 		),
