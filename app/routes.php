@@ -11,11 +11,9 @@
 |
 */
 
-Route::get('/', function()
-{
-
-	return View::make('index');
-});
+Route::get('/', function() { return View::make('index'); });
+Route::get('v/{token}', 'ReportsController@getVerify');
+Route::get('queue', function() {  });
 
 Route::get('sitemap.xml', function()
 {
@@ -56,9 +54,6 @@ Route::group(['prefix' => 'api'], function()
 		});
 	});
 });
-
-// Shortcut to verify number
-Route::get('v/{token}', 'ReportsController@getVerify');
 
 Route::group(['prefix' => 'reports'], function()
 {

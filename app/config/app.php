@@ -124,7 +124,6 @@ return array(
 		'Dingo\Api\Provider\ApiServiceProvider',
 		'Bugsnag\BugsnagLaravel\BugsnagLaravelServiceProvider',
 		'Roumen\Sitemap\SitemapServiceProvider',
-		'Williamson\Larawhatsapi\LaraWhatsapiServiceProvider',
 		'Mitch\Hashids\HashidsServiceProvider'
 	),
 
