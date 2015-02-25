@@ -14,8 +14,8 @@ class WhatsAppQueue {
 
 		$debug = isset($data['debug']);
 
-		// try
-		// {
+		try
+		{
 
 			// Path where we store whatsapp data (.dat files)
 			$path = storage_path() . '/whatsapp/';
@@ -95,22 +95,22 @@ class WhatsAppQueue {
 			// Finish the task
 			$w->disconnect();
 			$job->delete();
-		// }
-		// catch (Exception $e)
-		// {
+		}
+		catch (Exception $e)
+		{
 
-		// 	Log::error($e->getMessage());
+			Log::error($e->getMessage());
 
-		// 	if ($job->attempts() > 3)
-		// 	{
+			if ($job->attempts() > 3)
+			{
 			 
-		// 	 	$job->delete();
-		// 	}
-		// 	else
-		// 	{
+			 	$job->delete();
+			}
+			else
+			{
 
-		// 		$job->release(30);
-		// 	}
-		// }
+				$job->release(30);
+			}
+		}
 	}
 }
