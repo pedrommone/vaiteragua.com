@@ -88,7 +88,7 @@
 			</div>
 		</section>
 
-		<a href="#whatsapp" class="btn bg-green btn-whatsapp">Notificar via WhatsApp</a>
+		<!-- <a href="#whatsapp" class="btn bg-green btn-whatsapp">Notificar via WhatsApp</a> -->
 		<a href="#history" class="btn">Ver histórico</a>
 		<br>
 		<div class="fb-like" data-href="https://www.facebook.com/vaiteragua?ref=br_tf" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
