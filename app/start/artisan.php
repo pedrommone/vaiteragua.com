@@ -14,3 +14,4 @@
 Artisan::add(new CrawlWatershed);
 Artisan::add(new ReservoirsWatershed);
 Artisan::add(new GenerateDailyReport);
+Artisan::add(new TestWhatsApp);

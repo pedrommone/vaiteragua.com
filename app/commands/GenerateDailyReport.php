@@ -52,24 +52,19 @@ class GenerateDailyReport extends Command {
 		}
 
 		$targets = Telephone::
-			    whereNotNull("verified_at")
-			->get()
-			->toArray();
+			  whereNotNull("verified_at")
+			->lists('number', 'number');
 
 		// Split it into 10 messages per row
-		foreach(array_chunk($targets, 10, true) as $index => $target)
+		foreach(array_chunk($targets, 20, true) as $index => $numbers)
 		{
 
 			$time = Carbon::now()->addMinutes($index);
 
-			foreach ($target as $telephone)
-			{
-			
-				Queue::later($time, 'WhatsAppQueue@fire', [
-					"number" => "55" . $telephone['number'],
-					"msg" => $msg
-				]);
-			}
+			Queue::later($time, 'WhatsAppQueue@fire', [
+				"number" => array_values($numbers),
+				"msg" => $msg
+			]);
 		}
 	}
 }

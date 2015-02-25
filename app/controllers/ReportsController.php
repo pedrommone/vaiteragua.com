@@ -16,7 +16,7 @@ class ReportsController extends BaseController {
 		if ( ! $validator->fails())
 		{
 
-			$telephone = Telephone::firstOrCreate(['number' => Input::get('number')]);
+			$telephone = Telephone::firstOrCreate(['number' => '55' . Input::get('number')]);
 
 			Queue::push('WhatsAppQueue@fire', [
 				"number" => "55" . $telephone->number,
