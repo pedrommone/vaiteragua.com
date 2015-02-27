@@ -6,12 +6,17 @@
 
 Its an open source project, our goal is create a hotsite that we can show with simpleness our current situation. Feel free to open an issue and send a pull request :).
 
-### Tecnologia
+### Tecnologia/Technology
 
 * [Laravel] - Backend e crawler
 
-### Licença
+### Licença/License
 
 MIT
 
+### Apoio/Sponsored
+
+* [Bugsnag] - Bugtracking and issues
+
 [Laravel]:http://laravel.com
+[Bugsnag]:http://bugsnag.com
