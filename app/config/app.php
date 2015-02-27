@@ -124,7 +124,8 @@ return array(
 		'Dingo\Api\Provider\ApiServiceProvider',
 		'Bugsnag\BugsnagLaravel\BugsnagLaravelServiceProvider',
 		'Roumen\Sitemap\SitemapServiceProvider',
-		'Mitch\Hashids\HashidsServiceProvider'
+		'Mitch\Hashids\HashidsServiceProvider',
+		'Thujohn\Twitter\TwitterServiceProvider',
 	),
 
 	/*
@@ -193,8 +194,9 @@ return array(
 		'View'              => 'Illuminate\Support\Facades\View',
 		'API'               => 'Dingo\Api\Facade\API',
 		'Bugsnag' 			  => 'Bugsnag\BugsnagLaravel\BugsnagFacade',
-		'Hashids' => 'Mitch\Hashids\Hashids',
-		'Carbon' => 'Carbon\Carbon'
+		'Hashids'           => 'Mitch\Hashids\Hashids',
+		'Carbon'            => 'Carbon\Carbon',
+		'Twitter'           => 'Thujohn\Twitter\TwitterFacade',
 	),
 
 );

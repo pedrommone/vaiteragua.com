@@ -12,7 +12,8 @@
 		"roumen/sitemap": "~2.4",
 		"mgp25/whatsapi": "@dev",
 		"mitch/hashids": "1.x",
-		"iron-io/iron_mq": "1.5.3"
+		"iron-io/iron_mq": "1.5.3",
+		"thujohn/twitter": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

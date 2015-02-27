@@ -7,13 +7,13 @@ use Symfony\Component\Console\Input\InputArgument;
 class GenerateDailyReport extends Command {
 
 	protected $name = 'reports:daily';
-	protected $description = 'Send daily reports to everyone at database.';
+	protected $description = 'Geberate daily reports.';
 
 	public function fire()
 	{
 		
 		$two_last_general = WatershedStatus::
-			    orderBy('created_at', 'desc')
+			  orderBy('created_at', 'desc')
 			->take(2)
 			->get();
 
@@ -51,20 +51,22 @@ class GenerateDailyReport extends Command {
 			$msg = "O nível caiu! Compartilhe vaiteragua.com com seus amigos e ajude a espalhar esta campanha! Perdemos $general_diff ponto(s) percentuais.";
 		}
 
-		$targets = Telephone::
-			  whereNotNull("verified_at")
-			->lists('number', 'number');
+		Twitter::postTweet(['status' => $msg, 'format' => 'json']);
 
-		// Split it into 10 messages per row
-		foreach(array_chunk($targets, 20, true) as $index => $numbers)
-		{
+		// $targets = Telephone::
+		// 	  whereNotNull("verified_at")
+		// 	->lists('number', 'number');
 
-			$time = Carbon::now()->addMinutes($index);
+		// // Split it into 10 messages per row
+		// foreach(array_chunk($targets, 20, true) as $index => $numbers)
+		// {
 
-			Queue::later($time, 'WhatsAppQueue@fire', [
-				"number" => array_values($numbers),
-				"msg" => $msg
-			]);
-		}
+		// 	$time = Carbon::now()->addMinutes($index);
+
+		// 	Queue::later($time, 'WhatsAppQueue@fire', [
+		// 		"number" => array_values($numbers),
+		// 		"msg" => $msg
+		// 	]);
+		// }
 	}
 }
