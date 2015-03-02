@@ -51,7 +51,7 @@ class ReportsController extends BaseController {
 			$telephone->verified_at = new Carbon;
 			$telephone->save();
 
-			$thankyou = "Obrigado por se inscrever :). Você pode sair dessa newsletter a qualquer momento, basta acessar o endereço " . url('/reports/' . Hashids::encode($telephone->id) . '/remove');
+			$thankyou = "Obrigado por se inscrever :). Você pode sair dessa newsletter a qualquer momento, basta acessar o endereço " . url('/r/' . Hashids::encode($telephone->id));
 
 			Queue::push('WhatsAppQueue@fire', [
 				"number" => "55" . $telephone->number,
