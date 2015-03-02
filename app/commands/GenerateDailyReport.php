@@ -27,6 +27,8 @@ class GenerateDailyReport extends Command {
 		$general_oldest = $two_last_general[1];
 
 		$general_diff = (double) $general_newest->percentage - (double) $general_oldest->percentage;
+		$general_diff = number_format(abs($general_diff), 2, '.', '');
+
 		$today = $general_newest->created_at->format("d/m/Y");
 		$yesterday = $general_oldest->created_at->format("d/m/Y");
 		$current = $general_newest->percentage;
@@ -48,7 +50,7 @@ class GenerateDailyReport extends Command {
 		if ($general_newest->percentage < $general_oldest->percentage)
 		{
 
-			$msg = "O nível caiu! Compartilhe vaiteragua.com com seus amigos e ajude a espalhar esta campanha! Perdemos " . $general_diff * -1 . "%.";
+			$msg = "O nível caiu! Compartilhe vaiteragua.com com seus amigos e ajude a espalhar esta campanha! Perdemos $general_diff%.";
 		}
 
 		$tweet = Twitter::postTweet(['status' => $msg, 'format' => 'json']);
