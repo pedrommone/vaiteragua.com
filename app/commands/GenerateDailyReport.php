@@ -36,7 +36,7 @@ class GenerateDailyReport extends Command {
 		if ($general_newest->percentage > $general_oldest->percentage)
 		{
 
-			$msg = "Subimos! Na contabilidade de hoje $today subimos $general_diff ponto(s) percentuais \o/. Estamos com o reservatório com $current%.";
+			$msg = "Subimos! Na contabilidade de hoje $today subimos $general_diff% \o/. Estamos com o reservatório com $current%.";
 		}
 
 		if ($general_newest->percentage == $general_oldest->percentage)
@@ -48,7 +48,7 @@ class GenerateDailyReport extends Command {
 		if ($general_newest->percentage < $general_oldest->percentage)
 		{
 
-			$msg = "O nível caiu! Compartilhe vaiteragua.com com seus amigos e ajude a espalhar esta campanha! Perdemos " . $general_diff * -1 . " ponto(s) percentuais.";
+			$msg = "O nível caiu! Compartilhe vaiteragua.com com seus amigos e ajude a espalhar esta campanha! Perdemos " . $general_diff * -1 . "%.";
 		}
 
 		$tweet = Twitter::postTweet(['status' => $msg, 'format' => 'json']);
