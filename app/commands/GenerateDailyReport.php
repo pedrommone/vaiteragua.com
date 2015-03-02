@@ -48,10 +48,12 @@ class GenerateDailyReport extends Command {
 		if ($general_newest->percentage < $general_oldest->percentage)
 		{
 
-			$msg = "O nível caiu! Compartilhe vaiteragua.com com seus amigos e ajude a espalhar esta campanha! Perdemos $general_diff ponto(s) percentuais.";
+			$msg = "O nível caiu! Compartilhe vaiteragua.com com seus amigos e ajude a espalhar esta campanha! Perdemos " . $general_diff * -1 . " ponto(s) percentuais.";
 		}
 
-		Twitter::postTweet(['status' => $msg, 'format' => 'json']);
+		$tweet = Twitter::postTweet(['status' => $msg, 'format' => 'json']);
+
+		Log::info($tweet);
 
 		// $targets = Telephone::
 		// 	  whereNotNull("verified_at")
