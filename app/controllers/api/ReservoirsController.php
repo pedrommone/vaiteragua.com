@@ -76,7 +76,7 @@ class ReservoirsController extends \Controller {
 			$data['columns'][] = $row->description;
 
 		// Prefill with past dates
-		foreach (range(29, 0) as $num)
+		foreach (range(30, 0) as $num)
 		{
 
 			$aux_index = Carbon::now()
