@@ -28,7 +28,7 @@ class CrawlWatershed extends Command {
 			$crawler = $client->request('GET', 'http://www.copasatransparente.com.br/index.php/nivel-dos-reservatorios/');
 			
 			// Filter and get our information
-			$crawln = $crawler->filterXPath('//*[@id="post-24"]/div/div[2]/table[1]/tbody/tr[2]/td[4]')->text();
+			$crawln = $crawler->filterXPath('//*[@id="conteudo-principal"]/div[3]/table[1]/tbody/tr[2]/td[4]')->text();
 
 			// Make use of regex!
 			preg_match_all("/(.*)%/", $crawln, $parse_crawln);
