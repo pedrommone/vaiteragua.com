@@ -54,9 +54,9 @@ class ReservoirsWatershed extends Command {
 
 			// Store xpath and names
 			$vessels = [
-				'Rio Manso' => '//*[@id="post-24"]/div/div[2]/table[1]/tbody/tr[3]/td[4]',
-				'Serra Azul' => '//*[@id="post-24"]/div/div[2]/table[1]/tbody/tr[4]/td[4]',
-				'Vargem das Flores' => '//*[@id="post-24"]/div/div[2]/table[1]/tbody/tr[5]/td[4]'
+				'Rio Manso' => '//*[@id="conteudo-principal"]/div[3]/table[1]/tbody/tr[3]/td[4]',
+				'Serra Azul' => '//*[@id="conteudo-principal"]/div[3]/table[1]/tbody/tr[4]/td[4]',
+				'Vargem das Flores' => '//*[@id="conteudo-principal"]/div[3]/table[1]/tbody/tr[5]/td[4]'
 			];
 
 			// Store it on database
